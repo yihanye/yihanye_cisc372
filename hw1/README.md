@@ -3,6 +3,7 @@ Author: Yihan Ye
 
 Step:
 1. make yihan_hello
+    
     It will compile yihan_hello.c to create the executable file
 
 2. make run
@@ -31,4 +32,5 @@ Step:
     Hello from Yihan! 
     
 3. make clean
+    
     remove any generated files, in this case it will remove yihan_hello executable file
