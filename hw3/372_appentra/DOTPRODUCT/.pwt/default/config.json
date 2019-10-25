@@ -1,0 +1,40 @@
+{
+  "Analysis": [
+    {
+      "Arguments": {
+        "C": {
+          "Args": "",
+          "Compiler": "gcc"
+        },
+        "Cpp": {
+          "Args": "",
+          "Compiler": "g++"
+        },
+        "Fortran": {
+          "Args": "",
+          "Compiler": "gfortran"
+        }
+      },
+      "Path": "."
+    }
+  ],
+  "Tasks": [
+    {
+      "Command": {
+        "Cwd": "/Users/tcollis/SC18/examples/DOTPRODUCT",
+        "Exec": "make"
+      },
+      "Group": "build",
+      "Name": "Main"
+    },
+    {
+      "Command": {
+        "Cwd": "/Users/tcollis/SC18/examples/DOTPRODUCT",
+        "Exec": "env OMP_NUM_THREADS=1 ./dotproduct "
+      },
+      "Group": "run",
+      "Name": "Main"
+    }
+  ],
+  "Version": 1
+}
