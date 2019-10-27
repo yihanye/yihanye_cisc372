@@ -49,12 +49,12 @@ int main(int argc, char* argv[]) {
 		}
 		
 	// ================================================
-	double time_finish = getClock();
-
+	double time_finish = getClock();	
 	// Prints an execution report
 	printf("time (s)= %.6f\n", time_finish - time_start);
 	printf("size\t= %i\n", param_steps);
 	printf("chksum\t= %.8f\n", out_result);
+	
 	const double realPiValue = 3.141592653589793238;
 	printf("error\t= %.1e\n", fabs(out_result - realPiValue));
 	if(param_iters > 1) printf("iters\t= %i\n", param_iters);

@@ -18,19 +18,23 @@
       "Path": "."
     }
   ],
+  "BundledHeaders": {
+    "IncludeLIBC": true,
+    "IncludeOpenMP": true
+  },
   "Tasks": [
     {
       "Command": {
-        "Cwd": "/Users/tcollis/SC18/examples/DOTPRODUCT",
-        "Exec": "make"
+        "Cwd": "/usa/yihanye/yihanye_cisc372/hw3/372_appentra/DOTPRODUCT",
+        "Exec": "make omp"
       },
       "Group": "build",
       "Name": "Main"
     },
     {
       "Command": {
-        "Cwd": "/Users/tcollis/SC18/examples/DOTPRODUCT",
-        "Exec": "env OMP_NUM_THREADS=1 ./dotproduct "
+        "Cwd": "/usa/yihanye/yihanye_cisc372/hw3/372_appentra/DOTPRODUCT",
+        "Exec": "env OMP_NUM_THREADS=8 ./dotproduct 15000000"
       },
       "Group": "run",
       "Name": "Main"
