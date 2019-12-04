@@ -85,14 +85,7 @@ int main(int argc, char** argv)
 
                 #pragma acc update self(A[0:m*n])
                 
-                for( int j = 0; j < min(m, 10); j++ )
-                {
-                    for( int i = 0; i < min(n, 10); i++ )
-                    {
-                        printf("%0.2f ", A[i+j*m]);
-                    }
-                    printf("\n");
-                }
+               
             }
         
             iter++;
