@@ -1,0 +1,44 @@
+{
+  "Analysis": [
+    {
+      "Arguments": {
+        "C": {
+          "Args": "",
+          "Compiler": "gcc"
+        },
+        "Cpp": {
+          "Args": "",
+          "Compiler": "g++"
+        },
+        "Fortran": {
+          "Args": "",
+          "Compiler": "gfortran"
+        }
+      },
+      "Path": "."
+    }
+  ],
+  "BundledHeaders": {
+    "IncludeLIBC": true,
+    "IncludeOpenMP": true
+  },
+  "Tasks": [
+    {
+      "Command": {
+        "Cwd": "/Users/yihanye/Desktop/CISC372/372_appentra/PI",
+        "Exec": "clang -Xpreprocessor -fopenmp -lomp src/pi.c src/pi_main.c -o pi"
+      },
+      "Group": "build",
+      "Name": "Main"
+    },
+    {
+      "Command": {
+        "Cwd": "/Users/yihanye/Desktop/CISC372/372_appentra/PI",
+        "Exec": "env OMP_NUM_THREADS=4 ./pi 2"
+      },
+      "Group": "run",
+      "Name": "Main"
+    }
+  ],
+  "Version": 1
+}
